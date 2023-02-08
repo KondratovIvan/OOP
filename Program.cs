@@ -97,6 +97,18 @@ class TCube : TSquare
     public double clength;
     public double dlength;
 
+    public TCube()
+    {
+
+    }
+    public TCube(double firstlength)
+    {
+        clength = firstlength;
+    }
+    public TCube(TCube anotherTCube)
+    {
+        clength = anotherTCube.clength;
+    }
     public override void dataInput()
     {
         Console.WriteLine("Введіть довжину ребра куба");
@@ -122,6 +134,7 @@ class TCube : TSquare
         Console.WriteLine("Довжина сторони куба:" + clength);
         Console.WriteLine("Площа куба:" + Squarecount());
         Console.WriteLine("Периметр куба:" + Perimetercount());
+        Console.WriteLine("Об'єм куба:" + Capacity());
     }
     public override void dataInputComparison()
     {
